@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leaderboard</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./style.css"> -->
 </head>
 <body>
     <div class="container">
@@ -21,44 +21,16 @@
       <div class="form-section">
         <h2 class="section-title">Add your score</h2>
         <div class="form">
-          <input type="text" placeholder="Your name">
-          <input type="text" placeholder="Your score">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="text" name="score" placeholder="Your score" required>
           <button class="submit-button">Submit</button>
         </div>
       </div>
   
       <table class="table">
-        <!-- <tr>
-          <th>Name</th>
-          <th>Score</th>
-        </tr> -->
-        <tr>
-          <td>Name</td>
-          <td>100</td>
-        </tr>
-        <tr>
-          <td>Name</td>
-          <td>20</td>
-        </tr>
-        <tr>
-          <td>Name</td>
-          <td>50</td>
-        </tr>
-        <tr>
-           <td>Name</td>
-           <td>78</td>
-        </tr>
-        <tr>
-           <td>Name</td>
-           <td>125</td>
-        </tr>
-        <tr>
-           <td>Name</td>
-           <td>77</td>
-        </tr>
-        <!-- Add more table rows as needed -->
+        
       </table>
     </div>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
