@@ -1,5 +1,3 @@
-/*  eslint-disable max-classes-per-file, no-useless-catch, no-unused-vars */
-
 const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 const insertDataMsg = document.querySelector('.score-message');
 const errorMsg = document.querySelector('.error-message');
@@ -14,7 +12,7 @@ const submitScore = async (gameId, user, score) => {
       body: JSON.stringify({ user, score }),
     });
     const data = await response.json();
-    insertDataMsg.textContent = `${data.result} and ${gameId}`;
+    insertDataMsg.textContent = `${data.result}`;
   } catch (error) {
     errorMsg.textContent = `Failed to create the game: ${error}`;
   }

@@ -1,5 +1,3 @@
-/*  eslint-disable max-classes-per-file, no-useless-catch, no-unused-vars */
-
 import './style.css';
 import createGame from './modules/createGame.js';
 import refreshScores from './modules/refreshScores.js';
@@ -12,8 +10,14 @@ const errorMsg = document.querySelector('.error-message');
 
 const createAndInitializeGame = async () => {
   try {
-    const gameName = 'El Nino';
-    gameId = await createGame(gameName);
+    const existingGameId = localStorage.getItem('gameId');
+    if (existingGameId) {
+      gameId = existingGameId;
+    } else {
+      const gameName = 'El Nino';
+      gameId = await createGame(gameName);
+      localStorage.setItem('gameId', gameId);
+    }
   } catch (error) {
     errorMsg.textContent = `Failed to create the game : ${error}`;
     return;
