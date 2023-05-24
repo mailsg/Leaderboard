@@ -1,3 +1,5 @@
+/*  eslint-disable max-classes-per-file, no-useless-catch, no-unused-vars */
+
 const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
 const submitScore = async (gameId, user, score) => {
@@ -10,10 +12,9 @@ const submitScore = async (gameId, user, score) => {
       body: JSON.stringify({ user, score }),
     });
     const data = await response.json();
-    console.log('Score submitted successfully:', data.result);
-    // Perform any necessary actions upon successful submission
+    // console.log(data.result);
   } catch (error) {
-    console.error('Failed to submit the score:', error);
+    // console.error('Failed to submit the score:', error);
   }
 };
 
