@@ -8,14 +8,14 @@ import submitScore from './modules/submitScore.js';
 let gameId;
 let isDOMContentLoadedFired = false;
 const msg = document.querySelector('.message');
+const errorMsg = document.querySelector('.error-message');
 
 const createAndInitializeGame = async () => {
   try {
     const gameName = 'El Nino';
     gameId = await createGame(gameName);
-    // console.log(gameId);
   } catch (error) {
-    // console.error('Failed to create the game:', error);
+    errorMsg.textContent = `Failed to create the game : ${error}`;
     return;
   }
 
@@ -39,6 +39,7 @@ const createAndInitializeGame = async () => {
     await submitScore(gameId, userName, scoreValue);
     userNameInput.value = '';
     scoreInput.value = '';
+    msg.textContent = '';
   });
 };
 
