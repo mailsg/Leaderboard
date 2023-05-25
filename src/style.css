@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-image: url('./images/back_img.jpg');
 }
 
 .container {
@@ -13,10 +14,40 @@ body {
 .heading {
   margin-top: 5rem;
   font-size: 50px;
+  opacity: 0;
+  animation: fadeInColors 10s ease-in infinite;
+}
+
+@keyframes fadeInColors {
+  0% {
+    opacity: 0;
+    color: red;
+  }
+
+  25% {
+    color: blue;
+  }
+
+  50% {
+    color: green;
+  }
+
+  75% {
+    color: orange;
+  }
+
+  100% {
+    opacity: 1;
+    color: purple;
+  }
 }
 
 .section-title {
   font-size: 35px;
+}
+
+.section-title:hover {
+  color: darkorange;
 }
 
 .score-section {
@@ -51,15 +82,12 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .refresh-button {
-  margin-left: 7rem;
-  padding: 8px 16px;
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  margin-left: 6rem;
+  width: 100px;
 }
 
 .submit-button {
@@ -69,7 +97,7 @@ body {
 
 .refresh-button:hover,
 .submit-button:hover {
-  background-color: #e0e0e0;
+  background-color: orangered;
 }
 
 .form input {
@@ -93,6 +121,10 @@ body {
   text-align: left;
 }
 
+.table td:hover {
+  background: lightslategray;
+}
+
 /* .table th {
     background-color: #f0f0f0;
 } */
@@ -103,4 +135,19 @@ body {
 
 .table tr:nth-child(even) {
   background-color: lightgray;
+}
+
+footer {
+  padding: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #000;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: transparent;
+}
+
+footer p {
+  font-weight: bold;
+  text-align: center;
 }
