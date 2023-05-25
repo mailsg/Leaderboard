@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url('./images/back_img.jpg');
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.heading {
+  margin-top: 5rem;
+  font-size: 50px;
+  opacity: 0;
+  animation: fadeInColors 10s ease-in infinite;
+}
+
+@keyframes fadeInColors {
+  0% {
+    opacity: 0;
+    color: red;
+  }
+
+  25% {
+    color: blue;
+  }
+
+  50% {
+    color: green;
+  }
+
+  75% {
+    color: orange;
+  }
+
+  100% {
+    opacity: 1;
+    color: purple;
+  }
+}
+
+.section-title {
+  font-size: 35px;
+}
+
+.section-title:hover {
+  color: darkorange;
+}
+
+.score-section {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form-section {
+  margin-left: 35rem;
+  margin-top: -6rem;
+}
+
+.form {
+  margin-top: 0;
+}
+
+.refresh-button-container {
+  margin-left: 20px;
+  margin-right: 25rem;
+  margin-bottom: -7rem;
+}
+
+.spacer {
+  margin-top: 20px;
+}
+
+.refresh-button,
+.submit-button {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.refresh-button {
+  margin-left: 6rem;
+  width: 100px;
+}
+
+.submit-button {
+  margin-left: 9rem;
+  width: 100px;
+}
+
+.refresh-button:hover,
+.submit-button:hover {
+  background-color: orangered;
+}
+
+.form input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-top: -11rem;
+  border: 2px solid black;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table td:hover {
+  background: lightslategray;
+}
+
+/* .table th {
+    background-color: #f0f0f0;
+} */
+
+.table tr:nth-child(odd) {
+  background-color: white;
+}
+
+.table tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+footer {
+  padding: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #000;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: transparent;
+}
+
+footer p {
+  font-weight: bold;
+  text-align: center;
+}
